@@ -43,11 +43,11 @@ $col_paddings: (
 );
 
 	// Colors
-$c_accent: #ED1844;
-$c_default: #1A1C20;
-$c_additional: #333740;
-$c_additional_2: #787C82;
-$c_overlay: #191C1F;
+$c_accent: #A0C24C; // green
+$c_default: #1A1A1A; // black - texts
+$c_additional: #F3E9E3; // bg color
+$c_additional_2: #DDCAC0; // additional
+// $c_overlay: #191C1F;
 $c_black: #000;
 $c_white: #fff;
 $c_transparent: transparent;
@@ -57,7 +57,7 @@ $c_transparent: transparent;
 .c-default { color: $c_default; }
 .c-additional { color: $c_additional; }
 .c-additional-2 { color: $c_additional_2 }
-.c-overlay { color: $c_overlay; }
+// .c-overlay { color: $c_overlay; }
 .c-black { color: $c_black; }
 .c-white { color: $c_white; }
 .c-transparent { color: $c_transparent; }
