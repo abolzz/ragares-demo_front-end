@@ -60,15 +60,32 @@
         <div class="site-wrap">
 
             <!-- site header -->
-            <header class="site-header flex-y-c bg-additional">
+            <header class="site-header flex-y-c">
                 <div class="container">
-                    <div class="row m-x-0">
-                        <a href="javascript:void(0)">
-                            <div class="logo icon-bg" style="background-image: url(${require('./img/sem-logo.png')}); width: 62px; height: 25px;"></div>
-                        </a>
-                        <a href="javascript:void(0)">
-                            <img class="logo" src="${require('./img/sem-logo.png')}">
-                        </a>
+                    <div class="row m-x-0 all-caps">
+	                    	<div class="mobile-menu-icon hide-xl hide-lg margin-auto">
+	                        <div class="inner">
+	                          <span></span>
+	                          <span></span>
+	                          <span></span>
+	                        </div>
+	                      </div>
+	                      <nav class="nav col col-xl-12 col-lg-12 mobile-menu-wrap hide-xs hide-sm flex-t-column-max-lg flex-min-lg">
+	                        <ul class="ul main-nav list-style-none flex-t-column-max-lg flex-x-c flex-grow">
+	                        	<li><a href="#produkti">Produkti</a></li>
+	                        	<li><a href="#par-mums">Par mums</a></li>
+	                        	<li><a href="#kur-mus-atrast">Kur mūs atrast</a></li>
+	                        	<li><a href="#ekskursijas">Ekskursijas</a></li>
+	                        	<li><a href="#kontakti">Kontakti</a></li>
+	                        </ul>
+	                        <div class="lang-switch flex-y-c block-x-right-min-lg">
+		                        <ul class="ul list-style-none flex-x-c">
+		                        	<li><a href="#" class="active">Lv</a></li>
+		                        	<li><a href="#">En</a></li>
+		                        	<li><a href="#">Ru</a></li>
+		                        </ul>
+	                        </div>
+                        </nav>
                     </div>
                 </div>
             </header>

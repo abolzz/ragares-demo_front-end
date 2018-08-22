@@ -1,9 +1,9 @@
 /* Site content */
 
 // General
-.site-content { 
-	padding-top: 100px;
-	padding-bottom: 50px;
+.site-content {
+  padding-bottom: 50px;
+  transition: all 0.2s ease-in-out 0s;
 }
 
 .btn-1 {
@@ -29,4 +29,19 @@
   width: 500px;
   height: 500px;
   background-image: url(../img/test-image.jpg);
+}
+
+.push {
+  -webkit-transform:translate3d(65vw, 0, 0);
+  -moz-transform:translate3d(65vw, 0, 0);
+  -o-transform:translate3d(65vw, 0, 0);
+  transform:translate3d(65vw, 0, 0);
+  transition: all 0.2s ease-in-out 0s;
+}
+
+// Intro screen
+.intro-screen {
+  background-image: url(../img/home-bg.jpg);
+  min-width: 100vw;
+  min-height: 100vh;
 }
