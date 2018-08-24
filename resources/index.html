@@ -5,34 +5,197 @@ ${require('./header.html')}
 				<section class="section intro-screen section-bg">
 					<div class="container">
 						<div class="row">
-						</div>
-					</div>
-				</section>
-				<section class="test-section" data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
-					<div class="container">
-						<div class="row">
-							<div class="col col-12">
-								<h1 class="h1">Checking different images</h1>
-								<img src="${require('./img/test-image.png')}">
-								<img src="${require('./img/test-image.jpg')}">
-								<img src="${require('./img/test-image.svg')}">
-							</div>
-						</div>
-						<div class="row flex-x-c">
-							<div class="col col-6 col-sm-12 col-xs-12">
-								<div class="slider-wrapper">
-								   <ul class="lightslider cS-hidden" id="lightslider-1">
-							            <li class="lightslider-item section-bg" style=""></li>
-							            <li class="custom-item section-bg" style="background-image: url(${require('./img/test-image.jpg')});"></li>
-							            <li class="custom-item section-bg" style="background-image: url(${require('./img/test-image.png')});"></li>
-							            <li class="custom-item section-bg" style="background-image: url(${require('./img/test-image.svg')});"></li>
-								  	</ul>
+							<div class="col col-12 wrap">
+								<div class="col col-12 top inline-x-c">
+									<img src="${require('./img/logo.png')}" alt="Ragares logo" class="img logo">
+								</div>
+								<div class="middle">
+									
+								</div>
+								<div class="bottom">
+									
 								</div>
 							</div>
 						</div>
-						<div class="row js-row-full-w bg-accent">
-							<h1 class="h1 c-on-dark">This is full width row</h1>
+					</div>
+				</section>
+
+				<!-- Products section -->
+				<section id="produkti" class="section products-section bg-additional" data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+					<div class="container inner-default">
+						<div class="row">
+							<div class="col col-12 lightslider-wrap margin-auto">
+								<ul class="list-style-none lightslider all-caps f-14 bold">
+									<li class="lightslider-item">
+										<a href="" class="text-decor-none">
+											<div class="lightslider-img section-bg">
+												<div class="hover-text c-white bg-default block-y-b block-x-c">
+													<span class="inline-x-c block-y-c">Apskatīt produktu</span>
+												</div>
+											</div>
+											<p class="c-default flex-x-c margin-auto inline-x-c">Sieviešu tēja</p>
+										</a>
+									</li>
+									<li class="lightslider-item">
+										<a href="" class="text-decor-none">
+											<div class="lightslider-img section-bg">
+												<div class="hover-text c-white bg-default block-y-b block-x-c">
+													<span class="inline-x-c block-y-c">Apskatīt produktu</span>
+												</div>
+											</div>
+											<p class="c-default flex-x-c margin-auto inline-x-c">Vakara tēja ar apiņiem (vīgriezēm)</p>
+										</a>
+									</li>
+									<li class="lightslider-item">
+										<a href="" class="text-decor-none">
+											<div class="lightslider-img section-bg">
+												<div class="hover-text c-white bg-default block-y-b block-x-c">
+													<span class="inline-x-c block-y-c">Apskatīt produktu</span>
+												</div>
+											</div>
+											<p class="c-default flex-x-c margin-auto inline-x-c">Zaļā sāls</p>
+										</a>
+									</li>
+								</ul>
+							</div>
 						</div>
+						<div class="row">
+							<button class="btn margin-auto"><a href="#produkti" class="a text-decor-none all-caps">Visi produkti</a></button>
+						</div>
+					</div>
+				</section>
+
+				<!-- About section -->
+				<section id="par-mums" class="section about-section bg-additional" data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+					<div class="container inner inner-default">
+
+						<div class="row">
+							<article class="col col-12 flex-y-c article">
+								<img src="${require('./img/product-3-hover.jpg')}" alt="About picture" class="col col-6 article-img">
+								<div class="col-5 flex">
+									<hr class="hr col-2"></hr>
+									<div class="col col-10 article-text">
+										<h1 class="h3 all-caps">Vecvecāku mantojums</h1>
+										<p class="p-default">Tēju receptes, zemes kopšanas un dārza veidošanas tradīcijas un pašas Ragāres ir vecvecāku mantojums. Zinātņu doktori Māra un Jānis Vaivari gan dzīves gaitā</p>
+										<button class="btn"><a href="" class="text-decor-none all-caps flex-x-c">Par mums</a></button>
+									</div>
+								</div>
+							</article>
+						</div>
+
+						<div class="row">
+							<article class="col col-12 flex-y-c flex-x-r article">
+								<img src="${require('./img/product-3.jpg')}" alt="About picture" class="col col-6 article-img">
+								<div class="col-5 flex">
+									<hr class="hr col-2"></hr>
+									<div class="col col-10 article-text">
+										<h1 class="h3 all-caps">Kas ir zaļā sāls?</h1>
+										<p class="p-default">Lieliska aromātiska piedeva ēdieniem, sevišķi piestāv salātiem, bet lietojams arī pie jebkura cita ēdiena, kam paredzēts pievienot sāli.</p>
+										<button class="btn"><a href="" class="text-decor-none all-caps flex-x-c">Skatīt produktu</a></button>
+									</div>
+								</div>
+							</article>
+						</div>
+
+						<div class="row flex-x-c">
+							<div class="col col-12">
+								<div class="section-bg sertificates-header"><h1 class="h2 c-white all-caps flex-x-c flex-y-c full-h">Sertifikāti</h1></div>
+							</div>
+							<div class="col col-10 flex-x-c">
+								<figure class="col col-4 flex-t-column">
+									<div class="serticiate-img-wrap flex-y-c flex-x-c">
+										<img src="${require('./img/lv-ekoprodukts-logo.png')}" alt="Latvijas ekoprodukts logo" class="img">
+									</div>
+									<figcaption class="all-caps bold f-14 inline-x-c">Latvijas ekoprodukts</figcaption>
+								</figure>
+								<figure class="col col-4 flex-t-column">
+									<div class="serticiate-img-wrap flex-y-c flex-x-c">
+										<img src="${require('./img/es-bio-lauksaimnieciba-logo.png')}" alt="Eiropas Savienības Bioloģiska lauksaimniecība logo" class="img">
+									</div>
+									<figcaption class="all-caps bold f-14 inline-x-c">Eiropas Savienības Bioloģiska lauksaimniecība</figcaption>
+								</figure>
+								<figure class="col col-4 flex-t-column">
+									<div class="serticiate-img-wrap flex-y-c flex-x-c">
+										<img src="${require('./img/slow-food-riga-logo.png')}" alt="Slow food Riga logo" class="img">
+									</div>
+									<figcaption class="all-caps bold f-14 inline-x-c">Slow food Riga</figcaption>
+								</figure>
+
+								<button class="btn"><a href="" class="text-decor-none all-caps flex-x-c">Uzzināt vairāk</a></button>
+							</div>
+						</div>
+
+					</div>
+				</section>
+
+				<!-- Where to find us section -->
+				<section id="kur-mus-atrast" class="section where-to-find-us-section bg-additional" data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+					<div class="container inner inner-default">
+
+						<div class="row">
+							<article class="col col-12 flex-y-c article">
+								<div class="col col-6 section-bg address-pic"></div>
+								<div class="col-6 flex">
+									<hr class="hr col-2"></hr>
+									<div class="col col-10 article-text">
+										<h1 class="h3 all-caps">Kur mūs atrast</h1>
+										<ul class="ul list-style-none bold p-default">
+											<li>Kalnciema kvartāla tirdziņš
+												<address>Kalnciema iela 35, Rīga</address>
+											</li>
+											<li>Kalnciema kvartāla tirdziņš
+												<address>Kalnciema iela 35, Rīga</address>
+											</li>
+											<li>Kalnciema kvartāla tirdziņš
+												<address>Kalnciema iela 35, Rīga</address>
+											</li>
+											<li>Kalnciema kvartāla tirdziņš
+												<address>Kalnciema iela 35, Rīga</address>
+											</li>
+											<li>Kalnciema kvartāla tirdziņš
+												<address>Kalnciema iela 35, Rīga</address>
+											</li>
+											<li>Kalnciema kvartāla tirdziņš
+												<address>Kalnciema iela 35, Rīga</address>
+											</li>
+											<li>Kalnciema kvartāla tirdziņš
+												<address>Kalnciema iela 35, Rīga</address>
+											</li>
+											<li>Kalnciema kvartāla tirdziņš
+												<address>Kalnciema iela 35, Rīga</address>
+											</li>
+											<li>Kalnciema kvartāla tirdziņš
+												<address>Kalnciema iela 35, Rīga</address>
+											</li>
+											<li>Kalnciema kvartāla tirdziņš
+												<address>Kalnciema iela 35, Rīga</address>
+											</li>
+											<li>Kalnciema kvartāla tirdziņš
+												<address>Kalnciema iela 35, Rīga</address>
+											</li>
+											<li>Kalnciema kvartāla tirdziņš
+												<address>Kalnciema iela 35, Rīga</address>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</article>
+						</div>
+
+						<div class="row">
+							<article class="col col-12 flex-y-c flex-x-r article">
+								<img src="${require('./img/product-3.jpg')}" alt="About picture" class="col col-6 article-img">
+								<div class="col-5 flex">
+									<hr class="hr col-2"></hr>
+									<div class="col col-10 article-text">
+										<h1 class="h3 all-caps">Kas ir zaļā sāls?</h1>
+										<p class="p-default">Lieliska aromātiska piedeva ēdieniem, sevišķi piestāv salātiem, bet lietojams arī pie jebkura cita ēdiena, kam paredzēts pievienot sāli.</p>
+										<button class="btn"><a href="" class="text-decor-none all-caps flex-x-c">Skatīt produktu</a></button>
+									</div>
+								</div>
+							</article>
+						</div>
+
 					</div>
 				</section>
 			</main>

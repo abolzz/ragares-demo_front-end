@@ -9,7 +9,11 @@
   z-index: 99;
   .nav {
   	.active { opacity: 1; }
-  	position: relative; }
+  	position: relative;
+  	.lang-switch {
+  		li { margin: 0 8px; }
+  	}
+  }
   .ul {
   	li { margin: 0 15px; }
   	a {

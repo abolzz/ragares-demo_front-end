@@ -118,7 +118,7 @@ $(document).ready(function() {
   });
 
   // Add CSS class to Site Header when scrollTop position of the document is not 0
-  let $lastY = $window.scrollTop();
+  var $lastY = $window.scrollTop();
   function add_not_top() {
     $body.addClass("not--top");
   }
@@ -134,11 +134,11 @@ $(document).ready(function() {
 
   $(window).scroll(() => {
 
-    let $currentY = $window.scrollTop();
+    var $currentY = $window.scrollTop();
     if ( $currentY > $lastY ) {
-      let y = 'down';
+      var y = 'down';
     } else if ( $currentY < $lastY ) {
-      let y = 'up';
+      var y = 'up';
     }
     $lastY = $currentY;
     if ( $document.scrollTop() > 50 && y == 'down' ) {
@@ -167,7 +167,6 @@ $(document).ready(function() {
             pauseOnHover  : true,
             speed: 600,
             pause: 3000,
-            controls: false,
             onBeforeStart: function() {
               if ( $this_slider.find('li').length < 2 ) {
                 $this_slider.addClass('one-item');
@@ -179,15 +178,17 @@ $(document).ready(function() {
           });
         } else {
           $this.lightSlider({
-            item  : 1,
+            item  : 3,
             pager : false,
             auto      : true,
             loop      : true,
+            slideMargin: 0,
             pauseOnHover  : true,
             speed: 600,
             pause: 3000,
             enableTouch : false,
             enableDrag : false,
+            controls: true,
             onBeforeStart: function() {
               if ( $this_slider.find('li').length < 2 ) {
                 $this_slider.addClass('one-item');
@@ -240,5 +241,21 @@ $(document).ready(function() {
     $(".site-content").toggleClass("push");
     $(".mobile-menu-wrap").toggleClass("menu-open");
   });
+
+  // Active links
+  $(".main-nav a").click(function() {
+    $(".main-nav a").removeClass("active");
+    $(this).addClass("active");
+  });
+
+  $(".lang-switch a").click(function() {
+    $(".lang-switch a").removeClass("active");
+    $(this).addClass("active");
+  });
+
+  // Lightslider img height
+  if ($(window).width() > 1199) {
+    $(".lightslider-img").css({ 'height': 0.33 * $(window).width() });
+  }
 
 });
