@@ -211,7 +211,9 @@ $(document).ready(function() {
 
     }
   }
-  imageSlider();
+  if ($(window).width() > 1199) {
+    imageSlider();
+  }
 
   // Select
   function selectPlugin() {
@@ -254,8 +256,18 @@ $(document).ready(function() {
   });
 
   // Lightslider img height
-  if ($(window).width() > 1199) {
-    $(".lightslider-img").css({ 'height': 0.33 * $(window).width() });
+  if ($(window).width() > 767 && $(window).width() < 1200) {
+    $(".lightslider-img").css({ 'height': 0.4 * $(window).width() });
+    $(".lightslider-item").css({ 'height': 95 + $(".lightslider-img").height() });
   }
+
+  if ($(window).width() > 319 && $(window).width() < 768) {
+    $(".lightslider-img").css({ 'height': 0.56 * $(window).width() });
+    $(".lightslider-item").css({ 'height': 95 + $(".lightslider-img").height() });
+  }
+
+  // Date-picker
+  $( "#datepicker" ).datepicker();
+  $.datepicker.setDefaults($.datepicker.regional['lv']);
 
 });

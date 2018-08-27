@@ -13,7 +13,12 @@
   padding-bottom: 35px;
 }
 
-.p-default { margin: 30px 0; }
+.p-default {
+  margin: 30px 0;
+  letter-spacing: .06em;
+}
+
+.hr { background-color: $c_additional_2; }
 
 .btn-1 {
   min-width: 223px;
@@ -80,7 +85,6 @@
     }
     .lightslider-img {
       transition: all 0.2s ease-in-out 0s;
-      height: 450px;
       position: relative;
       &:hover {
         .hover-text { display: block; }
@@ -109,6 +113,29 @@
   }
   */
 }
+@media(min-width: $breakpoint_lg + 1) {
+  .lightslider-img { height: 450px; }
+}
+@media(max-width: $breakpoint_lg) {
+  .lightslider {
+    overflow-x: scroll;
+    .lightslider-item {
+      a {
+        p { width: 90%; }
+      }
+    }
+  }
+}
+@media(max-width: $breakpoint_md) {
+  .products-section {
+    .inner {
+      padding-right: 0;
+      padding-left: 0; 
+    }
+  }
+  .lightslider-wrap { padding: 0; }
+  .lightslider-item { padding: 0 20px; }
+}
 
 // About section
 .about-section {
@@ -116,26 +143,9 @@
     padding-top: 15px;
     padding-bottom: 65px;
   }
-  .row:nth-of-type(even) {
-      .article-text { order: 1; }
-      .article-img {
-        order: 2;
-        padding: 0 30px 0 0;
-      }
-      .hr { order: 2; }
-  }
   .article { margin: 50px 0; }
   .article-img { padding: 0 0 0 30px; }
-    .hr {
-      background-color: $c_additional_2;
-      height: 1px;
-      width: 106px;
-    }
-  .sertificates-header {
-    height: 360px;
-    background-image: url(../img/grass.jpg);
-    margin: 50px 30px 30px;
-  }
+  .sertificates-header { background-image: url(../img/grass.jpg); }
   .serticiate-img-wrap {
     height: 120px;
     width: 100%;
@@ -145,22 +155,166 @@
     width: 100%;
   }
 }
+@media(min-width: $breakpoint_lg + 1) {
+  .hr {
+    height: 1px;
+    width: 106px;
+  }
+  .about-section,
+  .where-to-find-us-section {
+    .row:nth-of-type(even) {
+        .article-text { order: 1; }
+        .article-img {
+          order: 2;
+          padding: 0 30px 0 0;
+        }
+        .hr { order: 2; }
+    }
+    .sertificates-header {
+      height: 360px;
+      margin: 50px 30px 30px;
+    }
+  }
+  .flex-x-r-min-lg {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+}
+@media(max-width: $breakpoint_lg) {
+  .hr {
+    width: 1px;
+    height: 38px;
+    margin: 0;
+    margin-bottom: 28px;
+    margin-left: 20px;
+  }
+  .about-section {
+    .sertificates-header {
+      height: 205px;
+      margin-bottom: 65px;
+    }
+  }
+  .flex-t-column-max-lg {
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap; 
+  }
+}
+@media(min-width: $breakpoint_md + 1) and (max-width: $breakpoint_lg) {
+  .article-img,
+  .article-text-wrap {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 15px;
+  }
+}
+@media(max-width: $breakpoint_md) {
+  .about-section {
+    .article {
+      margin: 20px 0;
+      padding: 0;
+    }
+    .article-img,
+    .article-text,
+    .article-text-wrap { padding: 0; }
+    .flex-x-c-max-md {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .sertificates-wrap { padding: 0; }
+    .sertificates-header {
+      height: 95px;
+      margin-bottom: 40px;
+    }
+  }
+}
 
 // Where to find us section
 .where-to-find-us-section {
   .inner { padding-top: 100px; }
-  .address-pic {
-    height: 728px;
-    background-image: url(../img/kur-mus-atrast-img.jpg);
-    margin-left: 30px;
-  }
-  .ul {
-    margin-right: 30px;
-    column-count: 2;
-    li { margin-bottom: 25px; }
-    address {
-      font-style: normal;
-      font-weight: normal;
+  .row:nth-of-type(1) {
+    .article-img {
+      background-image: url(../img/kur-mus-atrast-img.jpg);
+      margin-left: 30px;
     }
+    .ul {
+      column-count: 2;
+      li { margin-bottom: 22px; }
+      address {
+        font-style: normal;
+        font-weight: normal;
+      }
+    }
+  }
+  .row:nth-of-type(2) {
+    .article { margin-top: 100px; }
+    .article-img { background-image: url(../img/countryside-view.jpg); }
+    h2 { margin: 24px 0 10px; }
+    .ul {
+      margin-top: 0;
+      li {
+        margin-bottom: 22px;
+        .icon-li-before:before {
+          content: "\e904";
+          color: #ddcac0;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+  .article-img {
+    height: 728px;
+    max-width: 606px;
+  }
+  .datepicker {
+    background-color: $c_white;
+    left: -100px;
+    bottom: -150px;
+    p { height: 65px; }
+    .ui-datepicker {
+      width: 393px;
+      border: none;
+      border-top: 1px solid $c_additional_2;
+      .ui-datepicker-title { text-align: left; }
+      .ui-datepicker-header {
+        background-color: $c_white;
+        border: none;
+        margin-bottom: 15px;
+        margin-top: 15px;
+      }
+      .ui-datepicker-prev {
+        right: 70px;
+        left: auto;
+        span {
+          background-image: url(../img/arrow.svg);
+          background-position: center;
+          background-size: cover;
+        }
+      }
+      .ui-datepicker-next {
+        right: 30px;
+        span {
+          background-image: url(../img/arrow.svg);
+          background-position: center;
+          background-size: cover;
+          transform: rotate(180deg);
+        }
+      }
+      table { font-size: 16px; }
+      .ui-state-default { 
+        border: none;
+        background-color: transparent;
+      }
+    }
+  }
+}
+@media(max-width: $breakpoint_md) {
+  .where-to-find-us-section {
+    .ul { column-count: 1; }
   }
 }
