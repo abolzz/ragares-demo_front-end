@@ -28,7 +28,7 @@ ${require('./header.html')}
 								<ul class="list-style-none lightslider all-caps f-14 bold flex flex-nowrap">
 									<li class="col-xl-4 col-lg-4 col-md-5 col-7 lightslider-item">
 										<a href="" class="text-decor-none">
-											<div class="lightslider-img section-bg">
+											<div class="lightslider-img section-bg" style="background-image: url(${require(`./img/product-1.jpg`)});">
 												<div class="hover-text c-white bg-default block-y-b block-x-c">
 													<span class="inline-x-c block-y-c">Apskatīt produktu</span>
 												</div>
@@ -38,7 +38,7 @@ ${require('./header.html')}
 									</li>
 									<li class="col-xl-4 col-lg-4 col-md-5 col-7 lightslider-item">
 										<a href="" class="text-decor-none">
-											<div class="lightslider-img section-bg">
+											<div class="lightslider-img section-bg" style="background-image: url(${require(`./img/product-2.jpg`)});">
 												<div class="hover-text c-white bg-default block-y-b block-x-c">
 													<span class="inline-x-c block-y-c">Apskatīt produktu</span>
 												</div>
@@ -48,7 +48,7 @@ ${require('./header.html')}
 									</li>
 									<li class="col-xl-4 col-lg-4 col-md-5 col-7 lightslider-item">
 										<a href="" class="text-decor-none">
-											<div class="lightslider-img section-bg">
+											<div class="lightslider-img section-bg" style="background-image: url(${require(`./img/product-3.jpg`)});">
 												<div class="hover-text c-white bg-default block-y-b block-x-c">
 													<span class="inline-x-c block-y-c">Apskatīt produktu</span>
 												</div>
@@ -71,10 +71,10 @@ ${require('./header.html')}
 
 						<div class="row">
 							<article class="col col-12 flex flex-y-c article">
-								<img src="${require('./img/product-3-hover.jpg')}" alt="About picture" class="col-xl-6 col-lg-6 col-12 article-img">
-								<div class="col-xl-5 col-lg-5 col-md-10 col-12 flex flex-t-column-max-lg article-text-wrap">
+								<img src="${require('./img/product-3-hover.jpg')}" alt="About picture" class="col-xl-6 col-lg-6 col-md-10 col-12 article-img">
+								<div class="col-xl-5 col-lg-5 col-md-9 col-12 flex flex-t-column-max-lg article-text-wrap">
 									<hr class="hr col-xl-2 col-lg-2"></hr>
-									<div class="col col-10 col-xs-12 col-sm-12 article-text">
+									<div class="col col-10 col-md-11 col-xs-12 col-sm-12 article-text">
 										<h1 class="h3 all-caps">Vecvecāku mantojums</h1>
 										<p class="p-default">Tēju receptes, zemes kopšanas un dārza veidošanas tradīcijas un pašas Ragāres ir vecvecāku mantojums. Zinātņu doktori Māra un Jānis Vaivari gan dzīves gaitā</p>
 										<div class="flex-x-c-max-md">
@@ -87,10 +87,10 @@ ${require('./header.html')}
 
 						<div class="row">
 							<article class="col col-12 flex flex-y-c flex-x-r-min-lg article">
-								<img src="${require('./img/product-3.jpg')}" alt="About picture" class="col-xl-6 col-lg-6 col-12 article-img">
-								<div class="col-xl-5 col-lg-5 col-md-10 col-12 flex flex-t-column-max-lg article-text-wrap">
+								<img src="${require('./img/product-3.jpg')}" alt="About picture" class="col-xl-6 col-lg-6 col-md-10 col-12 article-img">
+								<div class="col-xl-5 col-lg-5 col-md-9 col-12 flex flex-t-column-max-lg article-text-wrap">
 									<hr class="hr col-xl-2 col-lg-2"></hr>
-									<div class="col col-10 col-xs-12 col-sm-12 article-text">
+									<div class="col col-10 col-md-11 col-xs-12 col-sm-12 article-text">
 										<h1 class="h3 all-caps">Kas ir zaļā sāls?</h1>
 										<p class="p-default">Lieliska aromātiska piedeva ēdieniem, sevišķi piestāv salātiem, bet lietojams arī pie jebkura cita ēdiena, kam paredzēts pievienot sāli.</p>
 										<div class="flex-x-c-max-md">
@@ -103,7 +103,9 @@ ${require('./header.html')}
 
 						<div class="row flex-x-c">
 							<div class="col col-12 sertificates-wrap">
-								<div class="section-bg sertificates-header"><h1 class="h2 c-white all-caps flex-x-c flex-y-c full-h">Sertifikāti</h1></div>
+								<div class="section-bg sertificates-header" style="background-image: url(${require('./img/grass.jpg')});">
+									<h1 class="h2 c-white all-caps flex-x-c flex-y-c full-h">Sertifikāti</h1>
+								</div>
 							</div>
 							<div class="col col-xl-10 col-lg-10 col-12 flex-x-c">
 								<figure class="col col-4 col-xs-12 col-sm-12 flex-t-column">
@@ -142,7 +144,7 @@ ${require('./header.html')}
 								<div class="col-xl-6 col-lg-6 col-md-10 col-12 flex flex-t-column-max-lg article-text-wrap">
 									<hr class="hr col-xl-2 col-lg-2"></hr>
 									<div class="col col-xl-10 col-lg-10 col-12 article-text">
-										<h1 class="h3 all-caps">Kur mūs atrast</h1>
+										<h1 class="h3 all-caps bold">Kur mūs atrast</h1>
 										<ul class="ul list-style-none bold p-default">
 											<li>Kalnciema kvartāla tirdziņš
 												<address>Kalnciema iela 35, Rīga</address>
@@ -193,14 +195,14 @@ ${require('./header.html')}
 						<div class="row">
 							<article class="col col-12 flex-y-c flex-x-r article">
 								<div class="col-xl-6 col-lg-6 col-12 section-bg article-img relative">
-									<div class="datepicker block-y-b" id="datepicker">
+									<div class="datepicker block-y-b-min-lg col-8 margin-auto" id="datepicker">
 										<p class="flex-x-c flex-y-c all-caps bold f-18">Ragāru kalendārs</p>
 									</div>
 								</div>
-								<div class="col-5 flex">
-									<hr class="hr col-2"></hr>
-									<div class="col col-10 article-text">
-										<h1 class="h3 all-caps">Ekskursijas un semināri</h1>
+								<div class="col-xl-5 col-lg-5 col-md-9 col-12 flex article-text-wrap">
+									<hr class="hr col-xl-2 col-lg-2"></hr>
+									<div class="col col-xl-10 col-lg-10 col-12 article-text">
+										<h1 class="h3 all-caps bold">Ekskursijas un semināri</h1>
 										<h2 class="p">Piedāvajam grupām:</h2>
 										<ul class="ul list-style-none p-default">
 											<li class="flex-inline flex-nowrap">
@@ -231,6 +233,30 @@ ${require('./header.html')}
 							</article>
 						</div>
 
+					</div>
+				</section>
+
+				<section id="kontakti" class="section contact-section" data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+					<div class="container inner">
+						<div class="row">
+								<article class="col col-12 flex flex-y-c article">
+									<div id="acf-map" class="google-map col-xl-6 col-lg-6 col-12">
+										<div class="marker" data-lat="56.966129" data-lng="24.141866"></div>
+									</div>
+									<div class="col-xl-5 col-lg-5 col-md-10 col-12 flex flex-t-column-max-lg article-text-wrap">
+										<hr class="hr col-xl-2 col-lg-2"></hr>
+										<div class="col col-10 col-xs-12 col-sm-12 article-text">
+											<h1 class="h3 all-caps bold">Kā mūs atrast</h1>
+											<p class="p">"Ragāres" atrodas Skrīveru novadā, 80km attālumā no Rīgas ceļojot pa A6 (Daugavpils šoseju), kalnā virs 'Klidziņas'.</p>
+											<h2 class="p bold">Telefons</h2>
+											<a href="tel:+37129229588" class="text-decor-none c-black">29229588, </a>
+											<a href="tel:+37165197569" class="text-decor-none c-black">65197569</a>
+											<h2 class="p bold">E-pasts</h2>
+											<a href="mailto:eco@ragares.com" class="text-decor-none c-black">eco@ragares.com</a>
+										</div>
+									</div>
+								</article>
+						</div>
 					</div>
 				</section>
 			</main>

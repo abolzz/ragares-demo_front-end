@@ -1,9 +1,30 @@
             
             <!-- site footer -->
-            <footer class="site-footer flex-y-c">
-                <div class="container">
-                    <div class="row m-x-0">
-                        <h1 class="h1 c-on-dark">This is Footer</h1>
+            <footer class="site-footer flex-y-b section-bg" style="background-image: url(${require('./img/grass.jpg')});">
+                <div class="container c-white">
+                    <div class="row m-x-0 flex">
+                        <div class="col col-md-4 col-xs-6 col-sm-6">
+                            <p class="p all-caps">Z/S "Ragāres"</p>
+                            <p class="p">Skrīveru novads</p>
+                        </div>
+                        <div class="col col-md-4 col-xs-6 col-sm-6 flex-grow">
+                            <p class="p all-caps">Kontakti</p>
+                            <a href="tel:+37129229588" class="text-decor-none c-white">29229588, </a>
+                            <a href="tel:+37165197569" class="text-decor-none c-white">65197569</a>
+                            <a href="mailto:eco@ragares.com" class="text-decor-none c-accent">eco@ragares.com</a>
+                        </div>
+                        <div class="col col-md-4 col-xs-12 col-sm-12 flex-y-c flex-x-c">
+                            <ul class="ul list-style-none flex-inline">
+                                <li><a href="" class="social-icon icon-facebook-icon flex-x-c flex-y-c"></a></li>
+                                <li><a href="" class="social-icon icon-twitter-icon flex-x-c flex-y-c"></a></li>
+                                <li><a href="" class="social-icon icon-youtube-icon flex-x-c flex-y-c"></a></li>
+                                <li><a href="" class="social-icon icon-instagram-icon flex-x-c flex-y-c"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row m-x-0 flex">
+                        <p class="col p p-default flex-grow">&copy; Z/S “Ragāres” 2018. Visas tiesības aizsargātas.</p>
+                        <p class="col p p-default">Izstrādāja: <a href="https://sem.lv" class="text-decor-none"><img src="${require('./img/sem-logo.png')}" class="img"></a></p>
                     </div>
                 </div>
             </footer>
@@ -26,5 +47,178 @@
         <!-- /site wrap -->
 
         <!-- Place for your manually added scripts, for example google maps -->
+        <!--
+        <script type="text/javascript" src="theme.js"></script>
+        <script>
+               // Google Maps API script
+        /* -------------------------------------------------------------------------------------- */
+          /*
+          *  new_map
+          *
+          *  This function will render a Google Map onto the selected jQuery element
+          *
+          *  @type  function
+          *  @date  8/11/2013
+          *  @since 4.3.0
+          *
+          *  @param $el (jQuery element)
+          *  @return  n/a
+          */
+
+          function new_map( $el ) {
+            
+            // var
+            var $markers = $el.find('.marker');
+            
+            
+            // vars
+            var args = {
+              zoom    : 13.6,
+              center    : new google.maps.LatLng(56.627316, 25.089017),
+              mapTypeId : google.maps.MapTypeId.ROADMAP,
+              disableDefaultUI: true,
+              zoomControl: true,
+              // gestureHandling: 'greedy',
+              // gestureHandling: 'none',
+            };
+                        
+            // create map
+            var map = new google.maps.Map( $el[0], args);
+            
+            
+            // add a markers reference
+            map.markers = [];
+            
+            
+            // add markers
+            $markers.each(function(){
+              
+                add_marker( $(this), map );
+              
+            });
+            
+            
+            // center map
+            center_map( map );
+            
+            
+            // return
+            return map;
+            
+          }
+
+          /*
+          *  center_map
+          *
+          *  This function will center the map, showing all markers attached to this map
+          *
+          *  @type  function
+          *  @date  8/11/2013
+          *  @since 4.3.0
+          *
+          *  @param map (Google Map object)
+          *  @return  n/a
+          */
+
+          function center_map( map ) {
+            // vars
+            var bounds = new google.maps.LatLngBounds();
+
+            // loop through all markers and create bounds
+            $.each( map.markers, function( i, marker ){
+
+              var latlng = new google.maps.LatLng( marker.position.lat(), marker.position.lng() );
+
+              bounds.extend( latlng );
+
+            });
+
+              // only 1 marker?
+              if( map.markers.length == 1 ) {
+                // set center of map
+                  map.setCenter( bounds.getCenter( center ) );
+                  map.setZoom( zoom );
+              } else {
+                // fit to bounds
+                map.fitBounds( bounds );
+
+                  google.maps.event.removeListener(listener); 
+              }
+
+          }
+
+          /*
+          *  add_marker
+          *
+          *  This function will add a marker to the selected Google Map
+          *
+          *  @type  function
+          *  @date  8/11/2013
+          *  @since 4.3.0
+          *
+          *  @param $marker (jQuery element)
+          *  @param map (Google Map object)
+          *  @return  n/a
+          */
+
+          function add_marker( $marker, map ) {
+
+            // var
+            var latlng = new google.maps.LatLng( $marker.attr('data-lat'), $marker.attr('data-lng') );
+
+            // create marker
+            var marker = new google.maps.Marker({
+              position  : latlng,
+              icon: "${require(`./img/marker.png`)}",
+              map     : map,
+            });
+
+            // add to array
+            map.markers.push( marker );
+
+            // if marker contains HTML, add it to an infoWindow
+            if( $marker.html() )
+            {
+              // create info window
+              var infowindow = new google.maps.InfoWindow({
+                content   : $marker.html()
+              });
+
+              // show info window when marker is clicked
+              google.maps.event.addListener(marker, 'click', function() {
+
+                //infowindow.open( map, marker );
+                window.location.href = this.url;
+
+              });
+            }
+
+          }
+
+          /*
+          *  document ready
+          *
+          *  This function will render each map when the document is ready (page has loaded)
+          *
+          *  @type  function
+          *  @date  8/11/2013
+          *  @since 5.0.0
+          *
+          *  @param n/a
+          *  @return  n/a
+          */
+          // global var
+          var map = null;
+
+          function initMap() {
+            // create map
+              map = new_map( $('#acf-map') );
+          }
+
+        /* -------------------------------------------------------------------------------------- */
+          // /Google Maps API script
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBv5KIF7Vh8BAiq15XaslQEMaL-VzYQcKY&callback=initMap"></script>
+    -->
     </body>
 </html>

@@ -240,7 +240,7 @@ $(document).ready(function() {
   // Mobile menu open
   $(".mobile-menu-icon").click(function() {
     $(".mobile-menu-icon").toggleClass("margin-auto push open");
-    $(".site-content").toggleClass("push");
+    $(".site-content, .site-footer").toggleClass("push");
     $(".mobile-menu-wrap").toggleClass("menu-open");
   });
 
@@ -269,5 +269,8 @@ $(document).ready(function() {
   // Date-picker
   $( "#datepicker" ).datepicker();
   $.datepicker.setDefaults($.datepicker.regional['lv']);
+
+  // Highlight specific dates
+
 
 });

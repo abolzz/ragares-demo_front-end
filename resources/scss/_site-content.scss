@@ -62,16 +62,13 @@
   .lightslider { margin-bottom: 33px; }
   .lightslider-item {
     &:nth-of-type(1) {
-      .lightslider-img { background-image: url(../img/product-1.jpg); }
       .lightslider-img:hover { background-image: url(../img/product-3-hover.jpg); }
     }
     &:nth-of-type(2) {
-      .lightslider-img { background-image: url(../img/product-2.jpg); }
       .lightslider-img:hover { background-image: url(../img/product-3-hover.jpg); }
     }
     &:nth-of-type(3) {
       border: none;
-      .lightslider-img { background-image: url(../img/product-3.jpg); }
       .lightslider-img:hover { background-image: url(../img/product-3-hover.jpg); }
     }
     padding: 0 30px;
@@ -126,6 +123,12 @@
     }
   }
 }
+@media(max-width: $breakpoint_lg) {
+  .products-section {
+    .inner { padding: 30px 0 35px 0; }
+  }
+}
+
 @media(max-width: $breakpoint_md) {
   .products-section {
     .inner {
@@ -144,8 +147,6 @@
     padding-bottom: 65px;
   }
   .article { margin: 50px 0; }
-  .article-img { padding: 0 0 0 30px; }
-  .sertificates-header { background-image: url(../img/grass.jpg); }
   .serticiate-img-wrap {
     height: 120px;
     width: 100%;
@@ -160,6 +161,7 @@
     height: 1px;
     width: 106px;
   }
+  .article-img { padding: 0 0 0 30px; }
   .about-section,
   .where-to-find-us-section {
     .row:nth-of-type(even) {
@@ -209,7 +211,7 @@
   .article-text-wrap {
     margin-right: auto;
     margin-left: auto;
-    padding: 0 15px;
+    // padding: 0 15px;
   }
 }
 @media(max-width: $breakpoint_md) {
@@ -236,14 +238,16 @@
 
 // Where to find us section
 .where-to-find-us-section {
-  .inner { padding-top: 100px; }
+  .inner {
+    padding-top: 100px;
+    padding-bottom: 250px;
+  }
   .row:nth-of-type(1) {
     .article-img {
       background-image: url(../img/kur-mus-atrast-img.jpg);
-      margin-left: 30px;
+      max-width: 606px;
     }
     .ul {
-      column-count: 2;
       li { margin-bottom: 22px; }
       address {
         font-style: normal;
@@ -267,19 +271,18 @@
       }
     }
   }
-  .article-img {
-    height: 728px;
-    max-width: 606px;
-  }
+  .article-img { height: 728px; }
   .datepicker {
     background-color: $c_white;
     left: -100px;
-    bottom: -150px;
+    bottom: -80px;
     p { height: 65px; }
     .ui-datepicker {
       width: 393px;
       border: none;
       border-top: 1px solid $c_additional_2;
+      margin: 0 auto;
+      td > a { text-align: center; }
       .ui-datepicker-title { text-align: left; }
       .ui-datepicker-header {
         background-color: $c_white;
@@ -313,8 +316,53 @@
     }
   }
 }
-@media(max-width: $breakpoint_md) {
+@media(min-width: $breakpoint_lg + 1) {
+  .block-y-b-min-lg {
+    position: absolute;
+    display: block;
+    top: auto;
+    bottom: 0;
+  }
   .where-to-find-us-section {
-    .ul { column-count: 1; }
+    .row:nth-of-type(1) {
+      .article-img { margin-left: 30px; }
+    }
+  }
+}
+@media(max-width: $breakpoint_lg) {
+  .where-to-find-us-section {
+    .row:nth-of-type(2) {
+      .article-img { max-width: 606px; }
+    }
+  }
+}
+@media(min-width: $breakpoint_md + 1) {
+  .where-to-find-us-section {
+    .row:nth-of-type(1) {
+      .ul { column-count: 2; }
+    }
+  }
+}
+
+.highlight {
+  background-color: #000000 !important;
+  background-image:none !important;
+  color: #ffffff !important;
+}
+
+// Contact section
+.contact-section {
+  .inner {
+    padding-top: 95px;
+    padding-bottom: 100px;
+  }
+  .google-map { height: 412px; }
+  h1 { margin-bottom: 30px; }
+  h2 { margin-top: 22px; }
+}
+
+@media(min-width: $breakpoint_lg + 1) {
+  .contact-section {
+    .article-text { padding-left: 30px; }
   }
 }
