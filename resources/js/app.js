@@ -267,10 +267,15 @@ $(document).ready(function() {
   }
 
   // Date-picker
-  $( "#datepicker" ).datepicker();
+  $( "#datepicker, #datepicker-popup" ).datepicker();
   $.datepicker.setDefaults($.datepicker.regional['lv']);
 
-  // Highlight specific dates
+  // Lightcase
+  $('a[data-rel^=lightcase]').lightcase();
+
+  $(".close-popup-icon").click(function() {
+    $("#lightcase-case").css({ 'display': "none" });
+  });
 
 
 });

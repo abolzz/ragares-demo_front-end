@@ -80,10 +80,8 @@ input[type="submit"]:hover {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border: 1px solid $c_black;
+  border: 1px solid $c_default;
   border-radius: 1px;
-  padding-left: 40px;
-  padding-right: 40px;
   width: 205px;
   height: 60px;
   font-weight: bold;
@@ -94,12 +92,13 @@ input[type="submit"]:hover {
 .btn * {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, text-decoration 0.15s ease-in-out;
 }
-.btn a { color: $c_black; }
+a { color: $c_default; }
+.btn a { color: $c_default; }
 .btn:focus,
 .btn:hover {
   text-decoration: none;
-  background-color: $c_black;
-  a { color: $c_white; }
+  background-color: $c_default;
+  color: $c_white;
 }
 .btn:focus,
 .btn.focus {

@@ -10,6 +10,8 @@ require("./scss/style.scss");
 require("./vendor/jquery-ui.min.css");
 require("./vendor/jquery-ui.theme.min.css");
 require("./vendor/jquery-ui.structure.min.css");
+require("./vendor/lightcase/src/css/lightcase.css");
+require("./vendor/lightcase/src/css/lightcase-no-breakpoint.css");
 
 // Your own javascript files
 require("./js/app.js");
@@ -18,3 +20,4 @@ window.AOS = require("./vendor/aos.js");
 require("./vendor/jquery.sumoselect.min.js");
 require("./vendor/jquery-ui.min.js");
 require("./vendor/datepicker-lv.js");
+require("./vendor/lightcase/src/js/lightcase.js");

@@ -95,7 +95,7 @@
 
 // Site Footer
 .site-footer {
-	min-height: 475px;
+	height: 475px;
 	background-position: bottom;
 	transition: all 0.2s ease-in-out 0s;
 	.inner {
@@ -123,5 +123,18 @@
 		.icon-twitter-icon:before { content: "\e906"; }
 		.icon-youtube-icon:before { content: "\e903"; }
 		.icon-instagram-icon:before { content: "\e902"; }
+	}
+}
+@media(max-width: $breakpoint_md) {
+	.flex-x-c-max-md {
+		display: flex;
+	  justify-content: center;
+	  flex-wrap: wrap;
+	}
+	.inline-x-c-max-md { text-align: center; }
+	.site-footer {
+		height: 400px;
+		.ul { margin-top: 10px; }
+		.p-default { margin: 0 0 10px; }
 	}
 }

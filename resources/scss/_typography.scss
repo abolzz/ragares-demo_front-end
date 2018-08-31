@@ -24,6 +24,10 @@
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: .18em;
+  color: $c_default;
+}
+.site-footer {
+  .p { color: $c_white; }
 }
 .h1 {
   font-family: 'Roboto-Bold', sans-serif;

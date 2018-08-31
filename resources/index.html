@@ -26,7 +26,7 @@ ${require('./header.html')}
 						<div class="row">
 							<div class="col col-12 lightslider-wrap margin-auto">
 								<ul class="list-style-none lightslider all-caps f-14 bold flex flex-nowrap">
-									<li class="col-xl-4 col-lg-4 col-md-5 col-7 lightslider-item">
+									<li class="col-xl-4 col-lg-4 col-md-5 col-6 lightslider-item">
 										<a href="" class="text-decor-none">
 											<div class="lightslider-img section-bg" style="background-image: url(${require(`./img/product-1.jpg`)});">
 												<div class="hover-text c-white bg-default block-y-b block-x-c">
@@ -36,7 +36,7 @@ ${require('./header.html')}
 											<p class="c-default flex-x-c margin-auto inline-x-c">Sieviešu tēja</p>
 										</a>
 									</li>
-									<li class="col-xl-4 col-lg-4 col-md-5 col-7 lightslider-item">
+									<li class="col-xl-4 col-lg-4 col-md-5 col-6 lightslider-item">
 										<a href="" class="text-decor-none">
 											<div class="lightslider-img section-bg" style="background-image: url(${require(`./img/product-2.jpg`)});">
 												<div class="hover-text c-white bg-default block-y-b block-x-c">
@@ -46,7 +46,7 @@ ${require('./header.html')}
 											<p class="c-default flex-x-c margin-auto inline-x-c">Vakara tēja ar apiņiem (vīgriezēm)</p>
 										</a>
 									</li>
-									<li class="col-xl-4 col-lg-4 col-md-5 col-7 lightslider-item">
+									<li class="col-xl-4 col-lg-4 col-md-5 col-6 lightslider-item">
 										<a href="" class="text-decor-none">
 											<div class="lightslider-img section-bg" style="background-image: url(${require(`./img/product-3.jpg`)});">
 												<div class="hover-text c-white bg-default block-y-b block-x-c">
@@ -60,7 +60,7 @@ ${require('./header.html')}
 							</div>
 						</div>
 						<div class="row">
-							<button class="btn margin-auto"><a href="#produkti" class="a text-decor-none all-caps">Visi produkti</a></button>
+							<a href="#produkti" class="margin-auto text-decor-none"><button class="btn all-caps flex-x-c flex-y-c">Visi produkti</button></a>
 						</div>
 					</div>
 				</section>
@@ -78,7 +78,7 @@ ${require('./header.html')}
 										<h1 class="h3 all-caps">Vecvecāku mantojums</h1>
 										<p class="p-default">Tēju receptes, zemes kopšanas un dārza veidošanas tradīcijas un pašas Ragāres ir vecvecāku mantojums. Zinātņu doktori Māra un Jānis Vaivari gan dzīves gaitā</p>
 										<div class="flex-x-c-max-md">
-											<button class="btn"><a href="" class="text-decor-none all-caps flex-x-c">Par mums</a></button>
+											<a href="#par-mums" class="text-decor-none"><button class="btn all-caps flex-x-c flex-y-c">Par mums</button></a>
 										</div>
 									</div>
 								</div>
@@ -94,7 +94,7 @@ ${require('./header.html')}
 										<h1 class="h3 all-caps">Kas ir zaļā sāls?</h1>
 										<p class="p-default">Lieliska aromātiska piedeva ēdieniem, sevišķi piestāv salātiem, bet lietojams arī pie jebkura cita ēdiena, kam paredzēts pievienot sāli.</p>
 										<div class="flex-x-c-max-md">
-											<button class="btn"><a href="" class="text-decor-none all-caps flex-x-c">Skatīt produktu</a></button>
+											<a href="" class="text-decor-none"><button class="btn all-caps flex-x-c flex-y-c">Skatīt produktu</button></a>
 										</div>
 									</div>
 								</div>
@@ -127,7 +127,7 @@ ${require('./header.html')}
 									<figcaption class="all-caps bold f-14 inline-x-c">Slow food Riga</figcaption>
 								</figure>
 
-								<button class="btn"><a href="" class="text-decor-none all-caps flex-x-c">Uzzināt vairāk</a></button>
+								<a href="" class="text-decor-none"><button class="btn all-caps flex-x-c flex-y-c">Uzzināt vairāk</button></a>
 							</div>
 						</div>
 
@@ -194,10 +194,7 @@ ${require('./header.html')}
 
 						<div class="row">
 							<article class="col col-12 flex-y-c flex-x-r article">
-								<div class="col-xl-6 col-lg-6 col-12 section-bg article-img relative">
-									<div class="datepicker block-y-b-min-lg col-8 margin-auto" id="datepicker">
-										<p class="flex-x-c flex-y-c all-caps bold f-18">Ragāru kalendārs</p>
-									</div>
+								<div class="col-xl-6 col-lg-6 col-12 section-bg article-img">
 								</div>
 								<div class="col-xl-5 col-lg-5 col-md-9 col-12 flex article-text-wrap">
 									<hr class="hr col-xl-2 col-lg-2"></hr>
@@ -227,15 +224,75 @@ ${require('./header.html')}
 											</li>
 										</ul>
 										<p class="p-default bold">Nepieciešams iepriekš pieteikties, mūsu jautrajam kolektīvam arī ir kaut kad jāstrādā!</p>
-										<button class="btn"><a href="" class="text-decor-none all-caps flex-x-c">Skatīt produktu</a></button>
+
+										<a href="#pieteikties-popup" data-rel="lightcase" class="text-decor-none"><button class="btn all-caps flex-x-c flex-y-c">Pieteikties</button></a>
+
+										<!-- Pieteikties(signup) popup -->
+										<div id="lightcase-case">
+											<div id="pieteikties-popup">
+												<div class="close-popup-icon absolute relative">
+													<span></span>
+													<span></span>
+												</div>
+												<h1 class="h1 f-18 all-caps inline-x-c">Pieteikties ekskursijai vai semināram</h1>
+										<form class="flex">
+											<div class="col col-6">
+												<p class="p bold flex">Vārds Uzvārds<span class="flex-x-r flex-grow">(obligāts)</span></p>
+												<input type="text" name="name" class="input">
+											</div>
+											<div class="col col-6">
+												<p class="p bold">Uzņēmuma nosaukums</p>
+												<input type="text" name="company" class="input">
+											</div>
+											<div class="col col-6">
+												<p class="p bold flex">E-pasts<span class="flex-x-r flex-grow">(obligāts)</span></p>
+												<input type="email" name="email" class="input">
+											</div>
+											<div class="col col-6">
+												<p class="p bold flex">Tālrunis<span class="flex-x-r flex-grow">(obligāts)</span></p>
+												<input type="text" name="phone" class="input">
+											</div>
+											<div class="col col-6">
+												<p class="p bold flex">Datums un laiks<span class="flex-x-r flex-grow">(obligāts)</span></p>
+												<div class="flex">
+													<input type="text" class="col-8 datepicker input" id="datepicker-popup">
+													<input type="time" name="time" class="col-4 input">
+													<label class="col-6 checkbox-container">Ekskursija
+													  <input type="checkbox" checked="checked">
+													  <span class="checkmark"></span>
+													</label>
+													<label class="col-6 checkbox-container">Pusdienas
+													  <input type="checkbox">
+													  <span class="checkmark"></span>
+													</label>
+												</div>
+											</div>
+											<div class="col col-12">
+												<p class="p bold">Papildus informācija</p>
+												<input type="text" name="additional-info" class="input additional-info">
+												<label class="checkbox-container">Jūs piekrītiet, ka Jūsu dati tiks izmantoti likumdošanā noteiktā kārtībā un tiks saglabāti līdz brīdim, kamēr tas būs nepieciešams.
+													<input type="checkbox">
+													<span class="checkmark"></span>
+												</label>
+											</div>
+											<a href="" class="col col-12 text-decor-none"><button class="btn all-caps flex-x-c flex-y-c">Pieteikties</button></a>
+										</form>
+
+											</div>
+										</div>
 									</div>
 								</div>
+								<!-- Ragares calendar -->
+									<div class="datepicker block-y-b-min-lg margin-auto" id="datepicker">
+										<p class="flex-x-c flex-y-c all-caps bold f-18">Ragāru kalendārs</p>
+									</div>
 							</article>
 						</div>
 
 					</div>
 				</section>
 
+				<!-- Contact section -->
 				<section id="kontakti" class="section contact-section" data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
 					<div class="container inner">
 						<div class="row">
