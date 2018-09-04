@@ -1,7 +1,7 @@
 ${require('./header.html')}
 			
-            <!-- site content -->
-			<main class="site-content">
+      <!-- site content -->
+			<main class="site-content home-content">
 				<section class="section intro-screen section-bg">
 					<div class="container">
 						<div class="row">
@@ -236,32 +236,32 @@ ${require('./header.html')}
 												</div>
 												<h1 class="h1 f-18 all-caps inline-x-c">Pieteikties ekskursijai vai semināram</h1>
 										<form class="flex">
-											<div class="col col-6">
+											<div class="col col-6 col-xs-12 col-sm-12">
 												<p class="p bold flex">Vārds Uzvārds<span class="flex-x-r flex-grow">(obligāts)</span></p>
 												<input type="text" name="name" class="input">
 											</div>
-											<div class="col col-6">
+											<div class="col col-6 col-xs-12 col-sm-12">
 												<p class="p bold">Uzņēmuma nosaukums</p>
 												<input type="text" name="company" class="input">
 											</div>
-											<div class="col col-6">
+											<div class="col col-6 col-xs-12 col-sm-12">
 												<p class="p bold flex">E-pasts<span class="flex-x-r flex-grow">(obligāts)</span></p>
 												<input type="email" name="email" class="input">
 											</div>
-											<div class="col col-6">
+											<div class="col col-6 col-xs-12 col-sm-12">
 												<p class="p bold flex">Tālrunis<span class="flex-x-r flex-grow">(obligāts)</span></p>
 												<input type="text" name="phone" class="input">
 											</div>
-											<div class="col col-6">
+											<div class="col col-6 col-xs-12 col-sm-12">
 												<p class="p bold flex">Datums un laiks<span class="flex-x-r flex-grow">(obligāts)</span></p>
 												<div class="flex">
-													<input type="text" class="col-8 datepicker input" id="datepicker-popup">
+													<input type="date" class="col-8 relative input date-input">
 													<input type="time" name="time" class="col-4 input">
 													<label class="col-6 checkbox-container">Ekskursija
 													  <input type="checkbox" checked="checked">
 													  <span class="checkmark"></span>
 													</label>
-													<label class="col-6 checkbox-container">Pusdienas
+													<label class="col-6 col-xs-12 col-sm-12 checkbox-container">Pusdienas
 													  <input type="checkbox">
 													  <span class="checkmark"></span>
 													</label>
@@ -275,7 +275,7 @@ ${require('./header.html')}
 													<span class="checkmark"></span>
 												</label>
 											</div>
-											<a href="" class="col col-12 text-decor-none"><button class="btn all-caps flex-x-c flex-y-c">Pieteikties</button></a>
+											<a href="" class="col col-12 text-decor-none"><button type="submit" class="btn all-caps flex-x-c flex-y-c">Pieteikties</button></a>
 										</form>
 
 											</div>

@@ -255,6 +255,10 @@ $(document).ready(function() {
     $(this).addClass("active");
   });
 
+
+  var loc = window.location.href; // returns the full URL
+  if(/index/.test(loc)) {
+
   // Lightslider img height
   if ($(window).width() > 767 && $(window).width() < 1200) {
     $(".lightslider-img").css({ 'height': 0.4 * $(window).width() });
@@ -264,6 +268,8 @@ $(document).ready(function() {
   if ($(window).width() > 319 && $(window).width() < 768) {
     $(".lightslider-img").css({ 'height': 0.56 * $(window).width() });
     $(".lightslider-item").css({ 'height': 95 + $(".lightslider-img").height() });
+  }
+
   }
 
   // Date-picker
@@ -276,6 +282,16 @@ $(document).ready(function() {
   $(".close-popup-icon").click(function() {
     $("#lightcase-case").css({ 'display': "none" });
   });
+
+  // Change the style of header in other pages than index.html
+    if(/index/.test(loc) == false) {
+      $('.site-header').addClass('bg-default');
+
+      // Products img height
+      if ($(window).width() < 1200) {
+        $(".lightslider-img").css({ 'height': 0.5 * $(window).width() });
+      }
+    }
 
 
 });

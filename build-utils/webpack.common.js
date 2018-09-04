@@ -46,6 +46,14 @@ const config = {
       template: 'resources/index.html'
     }),
     new HtmlWebpackPlugin({
+      filename: 'products.html',
+      template: 'resources/products.html'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'teja.html',
+      template: 'resources/teja.html'
+    }),
+    new HtmlWebpackPlugin({
       filename: '404.html',
       template: 'resources/404.html'
     }),
