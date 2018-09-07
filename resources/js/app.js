@@ -238,7 +238,8 @@ $(document).ready(function() {
   AOS.init();
 
   // Mobile menu open
-  $(".mobile-menu-icon").click(function() {
+  $(".mobile-menu-icon").unbind("click").click(function() {
+    console.log("hee");
     $(".mobile-menu-icon").toggleClass("margin-auto push open");
     $(".site-content, .site-footer").toggleClass("push");
     $(".mobile-menu-wrap").toggleClass("menu-open");
@@ -255,10 +256,6 @@ $(document).ready(function() {
     $(this).addClass("active");
   });
 
-
-  var loc = window.location.href; // returns the full URL
-  if(/index/.test(loc)) {
-
   // Lightslider img height
   if ($(window).width() > 767 && $(window).width() < 1200) {
     $(".lightslider-img").css({ 'height': 0.4 * $(window).width() });
@@ -268,8 +265,7 @@ $(document).ready(function() {
   if ($(window).width() > 319 && $(window).width() < 768) {
     $(".lightslider-img").css({ 'height': 0.56 * $(window).width() });
     $(".lightslider-item").css({ 'height': 95 + $(".lightslider-img").height() });
-  }
-
+    $(".product-pic").css({ 'height': 1.06 * $(window).width() });
   }
 
   // Date-picker
@@ -279,9 +275,7 @@ $(document).ready(function() {
   // Lightcase
   $('a[data-rel^=lightcase]').lightcase();
 
-  $(".close-popup-icon").click(function() {
-    $("#lightcase-case").css({ 'display': "none" });
-  });
+  var loc = window.location.href; // returns the full URL
 
   // Change the style of header in other pages than index.html
     if(/index/.test(loc) == false) {
@@ -291,7 +285,7 @@ $(document).ready(function() {
       if ($(window).width() < 1200) {
         $(".lightslider-img").css({ 'height': 0.5 * $(window).width() });
       }
-    }
+    };
 
 
 });

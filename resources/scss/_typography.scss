@@ -41,6 +41,13 @@
 @media(max-width: $breakpoint_md) {
   .h1 { font-size: 32px; }
 }
+.intro-screen {
+  .h1 { letter-spacing: 0.025em; }
+  .p {
+    letter-spacing: 0.05em;
+    color: $c_white;
+  }
+}
 .h2 {
   font-family: 'Roboto-Medium', sans-serif;
   font-size: 42px;

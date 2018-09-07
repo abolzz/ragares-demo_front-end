@@ -50,6 +50,10 @@ const config = {
       template: 'resources/products.html'
     }),
     new HtmlWebpackPlugin({
+      filename: 'about-us.html',
+      template: 'resources/about-us.html'
+    }),
+    new HtmlWebpackPlugin({
       filename: 'teja.html',
       template: 'resources/teja.html'
     }),
