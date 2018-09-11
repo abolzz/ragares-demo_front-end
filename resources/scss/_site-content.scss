@@ -60,8 +60,17 @@
   background-image: url(../img/home-bg.jpg);
   min-width: 100vw;
   min-height: 100vh;
-  .logo { margin-top: 80px; }
-  .hr { color: $c_white; }
+  .logo { margin-top: 12px; }
+  .hr {
+    color: $c_white;
+    height: 1px;
+  }
+}
+
+@media(min-width: $breakpoint_lg + 1) {
+  .intro-screen {
+    .logo { margin-top: 80px; }
+  }
 }
 
 // Products section
@@ -144,7 +153,8 @@
     .inner {
       padding-top: 25px;
       padding-right: 0;
-      padding-left: 0; 
+      padding-left: 0;
+      padding-bottom: 20px;
     }
     .lightslider { margin-bottom: 20px; }
     .lightslider-item {
@@ -157,18 +167,22 @@
   .lightslider-item { padding: 0 20px; }
 }
 
-.serticiate-img-wrap {
-  height: 120px;
-  width: 100%;
-}
-
 // About section
 .about-section {
   .inner {
     padding-top: 15px;
-    padding-bottom: 65px;
+    padding-bottom: 250px;
   }
   .article { margin: 50px 0; }
+}
+
+// Sertificates section
+.sertificates-section {
+  .inner { padding-bottom: 65px; }
+  .serticiate-img-wrap {
+    height: 120px;
+    width: 100%;
+  }
 }
 
 figcaption {
@@ -195,7 +209,7 @@ figcaption {
   }
   .sertificates-header {
     height: 360px;
-    margin: 50px 30px 30px;
+    margin: 0 30px 30px;
   }
   .flex-x-r-min-lg {
     display: flex;
@@ -204,6 +218,10 @@ figcaption {
   }
 }
 @media(max-width: $breakpoint_lg) {
+  .about-section {
+    .inner { padding-bottom: 120px; }
+    .article { margin-top: 20px; }
+  }
   .hr {
     width: 1px;
     height: 38px;
@@ -234,6 +252,10 @@ figcaption {
 }
 @media(max-width: $breakpoint_md) {
   .about-section {
+    .inner {
+      padding-top: 20px;
+      padding-bottom: 70px;
+    }
     .article {
       margin: 20px 0;
       padding: 0;
@@ -251,6 +273,12 @@ figcaption {
   .sertificates-header {
     height: 95px;
     margin-bottom: 40px;
+  }
+}
+
+@media(max-width: $breakpoint_md) {
+  .sertificates-section {
+    .inner { padding-bottom: 20px; }
   }
 }
 
@@ -281,6 +309,7 @@ figcaption {
       margin-top: 0;
       li {
         margin-bottom: 22px;
+        &:last-of-type { margin-bottom: 0; }
         .icon-li-before:before {
           content: "\e904";
           color: #ddcac0;
@@ -299,7 +328,11 @@ figcaption {
       border: none;
       border-top: 1px solid $c_additional_2;
       margin: 0 auto;
-      td > a { text-align: center; }
+      width: 100%;
+      td > a {
+        text-align: center;
+        height: 40px;
+      }
       .ui-datepicker-title { text-align: left; }
       .ui-datepicker-header {
         background-color: $c_white;
@@ -309,6 +342,7 @@ figcaption {
       }
       .ui-datepicker-prev {
         left: auto;
+        right: 60px;
         span {
           background-image: url(../img/arrow.svg);
           background-position: center;
@@ -340,7 +374,7 @@ figcaption {
     bottom: 0;
   }
   .where-to-find-us-section {
-    .ui-datepicker { width: 393px; }
+    .datepicker { width: 395px; }
     .row:nth-of-type(1) {
       .article-img { margin-left: 30px; }
     }
@@ -352,7 +386,10 @@ figcaption {
 }
 @media(max-width: $breakpoint_lg) {
   .where-to-find-us-section {
-    .inner { padding-bottom: 65px; }
+    .inner {
+      padding-bottom: 65px;
+      padding-top: 60px;
+    }
     .datepicker {
       margin-top: 60px;
       width: 375px;
@@ -361,6 +398,7 @@ figcaption {
     }
     .row:nth-of-type(2) {
       .article-img { max-width: 606px; }
+      .article { margin-top: 40px; }
     }
   }
 }
@@ -373,6 +411,10 @@ figcaption {
 }
 @media(max-width: $breakpoint_md) {
   .where-to-find-us-section {
+    .inner {
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
     .article-img { height: 385px; }
     .datepicker { width: 320px; }
     .ui-datepicker {
@@ -401,6 +443,18 @@ figcaption {
 @media(min-width: $breakpoint_lg + 1) {
   .contact-section {
     .article-text { padding-left: 30px; }
+  }
+}
+
+@media(max-width: $breakpoint_lg) {
+  .contact-section {
+    .inner { padding-bottom: 55px; }
+    .google-map { margin: 0 auto; }
+  }
+}
+@media(max-width: $breakpoint_md) {
+  .contact-section {
+    .inner { padding-top: 40px; }
   }
 }
 
@@ -618,10 +672,26 @@ figcaption {
 @media(max-width: $breakpoint_lg) {
   .product-pic { margin: 0 auto; }
 }
+@media(max-width: $breakpoint_md) {
+  .particular-product-section {
+    .inner {
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
+    .article,
+    .article-text {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
 
 // About us page
 @media(min-width: $breakpoint_lg + 1) {
   .about-us-content {
+    .about-us-section {
+      .inner { padding-top: 55px; }
+    }
     .product-example {
       .article-text { order: 1; }
       .article-img {

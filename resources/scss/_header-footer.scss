@@ -98,9 +98,8 @@
 	height: 475px;
 	background-position: bottom;
 	transition: all 0.2s ease-in-out 0s;
-	.inner {
-		min-height: 170px;
-	}
+	.inner { min-height: 170px; }
+	p:first-of-type { margin-bottom: 12px; }
 	.ul {
 		a {
 			text-decoration: none;
@@ -123,6 +122,16 @@
 		.icon-twitter-icon:before { content: "\e906"; }
 		.icon-youtube-icon:before { content: "\e903"; }
 		.icon-instagram-icon:before { content: "\e902"; }
+	}
+}
+
+@media(min-width: $breakpoint_lg +1) {
+	.site-footer {
+		.inner {
+			padding-right: 50px;
+			padding-left: 50px;
+			.col:first-of-type { margin-right: 50px; }
+		}
 	}
 }
 @media(max-width: $breakpoint_md) {
