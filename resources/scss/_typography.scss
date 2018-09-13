@@ -76,6 +76,8 @@
   line-height: 1.2;
 }
 
+.light { font-weight: 400; }
+
 .btn { 
   font-size: 14px;
   letter-spacing: .18em;
@@ -107,6 +109,8 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  font-size: 10px;
+  margin: auto;
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
